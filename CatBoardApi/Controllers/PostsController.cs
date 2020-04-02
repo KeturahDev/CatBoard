@@ -10,7 +10,7 @@ using System.Globalization;
 
 namespace CatBoardApi.Controllers
 {
-  [Route("api/Boards/{boardId}/[controller]")]
+  [Route("api/boards/{boardId}/[controller]")]
   [ApiController]
   public class PostsController : ControllerBase
   {
@@ -55,7 +55,7 @@ namespace CatBoardApi.Controllers
     public void Put( int id, int boardId, [FromBody] Post post)
     {
       post.EditDate = DateTime.Now;
-      post.PostId = id; //double checkoing id of the form body is the correct id
+      post.PostId = id; //double checking id of the form body is the correct id
       post.BoardId = boardId;
       _db.Entry(post).State = EntityState.Modified;
       _db.SaveChanges();
