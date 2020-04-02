@@ -78,5 +78,21 @@ namespace CatBoardInterface.Models
       request.AddHeader("Content-Type", "application/json");
       var response = await client.ExecuteTaskAsync(request);
     }
+
+    public static async Task UpVote(int boardId, int postId)
+    {
+      RestClient client = new RestClient("http://localhost:5000/api");
+      RestRequest request = new RestRequest($"boards/{boardId}/posts/{postId}/upvote", Method.PATCH);
+      request.AddHeader("Content-Type", "application/json");
+      var response = await client.ExecuteTaskAsync(request);
+    }
+
+    public static async Task DownVote(int boardId, int postId)
+    {
+      RestClient client = new RestClient("http://localhost:5000/api");
+      RestRequest request = new RestRequest($"boards/{boardId}/posts/{postId}/downvote", Method.PATCH);
+      request.AddHeader("Content-Type", "application/json");
+      var response = await client.ExecuteTaskAsync(request);
+    }
   }
 }

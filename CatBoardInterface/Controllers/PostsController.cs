@@ -66,5 +66,19 @@ namespace CatBoardInterface.Controllers
       Post.DeletePost(boardId, postId);
       return RedirectToAction("Details", "Boards", new { id = boardId });
     }
+
+    [HttpPost]
+    public ActionResult UpVote(int boardId, int postId)
+    {
+      Post.UpVote(boardId, postId);
+      return RedirectToAction("Details", "Boards", new { id = boardId });
+    }
+
+    [HttpPost]
+    public ActionResult DownVote(int boardId, int postId)
+    {
+      Post.DownVote(boardId, postId);
+      return RedirectToAction("Details", "Boards", new { id = boardId });
+    }
   }
 }

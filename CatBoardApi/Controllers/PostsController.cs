@@ -74,7 +74,7 @@ namespace CatBoardApi.Controllers
     [HttpPatch("{id}/upvote")]
     public void UpVote(int id)
     {
-      Post thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id); 
+      Post thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id);
       thisPost.Score ++;
       _db.Entry(thisPost).State = EntityState.Modified;
       _db.SaveChanges();
@@ -85,7 +85,7 @@ namespace CatBoardApi.Controllers
     [HttpPatch("{id}/downvote")]
     public void DownVote(int id)
     {
-      Post thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id); 
+      Post thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id);
       thisPost.Score --;
       _db.Entry(thisPost).State = EntityState.Modified;
       _db.SaveChanges();

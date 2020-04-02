@@ -51,5 +51,14 @@ namespace CatBoardInterface.Models
     {
       var apiCallTask = ApiHelper.DeletePost(boardId, postId);
     }
+
+    public static void UpVote(int boardId, int postId)
+    {
+      var apiCallTask = ApiHelper.UpVote(boardId, postId);
+    }
+    public static void DownVote(int boardId, int postId)
+    {
+      var apiCallTask = ApiHelper.DownVote(boardId, postId);
+    }
   }
 }
