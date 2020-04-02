@@ -1,4 +1,4 @@
-# CatBoardInterface+Api
+# CatBoard Interface+Api
 ### By **Keturah Howard, Jamison Cozart, Dusty McCord, Zakkrey Short**  March 30th 2020
 
 Repo holding ASP.NET core MVC application to display views that interact with the CatBoardApi application and the Api.
