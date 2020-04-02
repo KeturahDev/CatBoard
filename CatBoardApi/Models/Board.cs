@@ -17,6 +17,7 @@ namespace CatBoardApi.Models
     {
       this.Posts = new HashSet<Post>();
     }
+    public string BannerImage { get; set; }
 
     public virtual ICollection<Post> Posts { get; set; }
   }

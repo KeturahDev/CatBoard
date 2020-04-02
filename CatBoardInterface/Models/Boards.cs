@@ -16,6 +16,7 @@ namespace CatBoardInterface.Models
     public int BoardId { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
+    public string BannerImage { get; set; }
 
     public ICollection<Post> Posts { get; set; }
     public static List<Board> GetBoards()

@@ -15,6 +15,10 @@
         <p>Board Description</p>
         @Html.TextBoxFor(model => model.Description, new {@class="form-control"})
       </div>
+      <div class="form-group">
+        <p>Board Banner Image</p>
+        @Html.TextBoxFor(model => model.BannerImage, new {@class="form-control"})
+      </div>
       <button type="submit" class="btn btn-info btn-block"> Add a Board </button>
     }
   </div>
