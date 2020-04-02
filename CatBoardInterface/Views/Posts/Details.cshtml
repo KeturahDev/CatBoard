@@ -1,0 +1,7 @@
+<h1>Details</h1>
+<div> @Model.Title </div>
+<div> @Model.Body </div>
+<div> @Model.score </div>
+
+@Html.ActionLink("Edit", "Edit", "Posts", new {boardId = Model.BoardId, postId = Model.PostId }, new {@class="btn btn-info"})
+@Html.ActionLink("Delete", "Delete", "Posts", new {boardId = Model.BoardId, postId = Model.PostId }, new {@class="btn btn-danger"})

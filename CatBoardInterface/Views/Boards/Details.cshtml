@@ -1,0 +1,22 @@
+<h1>@Model.Name</h1>
+<h2>Description: @Model.Description</h2>
+<hr>
+
+@foreach (var post in Model.Posts)
+{
+  @* <h4> @post.Title</h4> *@
+  <h4> @Html.ActionLink($"{@post.Title}", "Details", "Posts", new { boardId = Model.BoardId, postId = post.PostId})</h4>
+  <div>
+    <p>
+      @post.Body
+    </p>
+    <p>Current Score : @post.score</p>
+  </div>
+  <br>
+
+}
+
+@Html.ActionLink("Add Post", "Create", "Posts", new {boardId = Model.BoardId}, new {@class="btn btn-success"})
+
+@Html.ActionLink("Edit", "Edit", new {id = Model.BoardId}, new {@class="btn btn-info"})
+@Html.ActionLink("Delete this Board", "Delete", new {id = Model.BoardId}, new {@class="btn btn-danger"})

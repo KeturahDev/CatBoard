@@ -1,0 +1,12 @@
+
+<h1>WHAT? LOOK AT ALL THESE BOARDS</h1>
+
+@foreach(Board board in Model)
+{
+
+  @Html.ActionLink($"{board.Name}", "Details", new {id = board.BoardId}, new { @class = "btn btn-dark btn-large"});
+  <hr>
+}
+<a href="/boards/create">
+  <button class="btn btn-primary">Add Board</button>
+</a>
