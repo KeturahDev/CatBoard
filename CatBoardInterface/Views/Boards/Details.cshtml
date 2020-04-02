@@ -18,7 +18,7 @@
     <input id="boardId" name="boardId" type="hidden" value="@Model.BoardId">
     @* @Html.HiddenFor(post => post.PostId); *@
     @* @Html.HiddenFor(model => Model.BoardId); *@
-    <input type="submit" value="UpVote" />
+    <button type="submit" value="UpVote" class="btn btn-success"><i class="fas fa-caret-square-up"></i></button>
   }
 
   @using (Html.BeginForm("DownVote", "Posts"))
@@ -27,7 +27,7 @@
     <input id="boardId" name="boardId" type="hidden" value="@Model.BoardId">
     @* @Html.HiddenFor(post => post.PostId); *@
     @* @Html.HiddenFor(model => Model.BoardId); *@
-    <input type="submit" value="DownVote" />
+    <button type="submit" value="DownVote" class="btn btn-danger"><i class="fas fa-caret-square-down"></i></button>
   }
 
   <br>
