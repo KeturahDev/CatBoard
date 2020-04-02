@@ -68,17 +68,31 @@ namespace CatBoardInterface.Controllers
     }
 
     [HttpPost]
-    public ActionResult UpVote(int boardId, int postId)
+    public ActionResult UpVote(int boardId, int postId, int viewId)
     {
       Post.UpVote(boardId, postId);
-      return RedirectToAction("Details", "Boards", new { id = boardId });
+      if(viewId == 1)
+      {
+        return RedirectToAction("Details", "Boards", new { id = boardId });
+      }
+      else 
+      {
+        return RedirectToAction("Details", "Posts", new { boardId = boardId, postId = postId });
+      }
     }
 
     [HttpPost]
-    public ActionResult DownVote(int boardId, int postId)
+    public ActionResult DownVote(int boardId, int postId, int viewId)
     {
       Post.DownVote(boardId, postId);
-      return RedirectToAction("Details", "Boards", new { id = boardId });
+      if(viewId == 1)
+      {
+        return RedirectToAction("Details", "Boards", new { id = boardId });
+      }
+      else 
+      {
+        return RedirectToAction("Details", "Posts", new { boardId = boardId, postId = postId });
+      }
     }
   }
 }
