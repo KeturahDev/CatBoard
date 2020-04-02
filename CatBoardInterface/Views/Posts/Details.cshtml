@@ -22,6 +22,20 @@
     }
 </div>
 
+@Html.ActionLink("Add Comment", "Create", "Comments", new {boardId = Model.BoardId, postId = Model.PostId }, new {@class="btn btn-info"})
+<hr>
+@if(Model.Comments.Count == 0)
+{
+  <p> No Comments </p>
+}
+else
+{
+  @foreach (var comment in Model.Comments)
+  {
+      <p> @comment.Body </p>
+  }
+}
+
 <hr>
 
 @Html.ActionLink("Edit", "Edit", "Posts", new {boardId = Model.BoardId, postId = Model.PostId }, new {@class="btn btn-info"})

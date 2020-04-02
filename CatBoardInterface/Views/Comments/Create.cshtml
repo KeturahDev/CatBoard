@@ -1,0 +1,21 @@
+@model CatBoardInterface.Models.Comment
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h1 class="text-center">Add Comment</h1>
+    <p> view bag for board Id = @ViewBag.boardId </p>
+    <p> view bag for post Id= @ViewBag.postId </p>
+    @using (Html.BeginForm())
+    {
+      <input type="hidden" name="boardId" value="@ViewBag.boardId">
+      <input type="hidden" name="postId" value="@ViewBag.postId">
+
+      <div class="form-group">
+        <p>Comment</p>
+        @Html.TextBoxFor(model => model.Body, new {@class="form-control"})
+      </div>
+
+      <button type="submit" class="btn btn-info btn-block"> Add a Comment </button>
+    }
+  </div>
+</div> 

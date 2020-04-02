@@ -8,6 +8,10 @@ namespace CatBoardInterface.Models
 {
   public class Post
   {
+    public Post()
+    {
+      this.Comments = new HashSet<Comment>();
+    }
     public int PostId { get; set; }
     public int BoardId { get; set; }
     public string Title { get; set; }
@@ -15,7 +19,7 @@ namespace CatBoardInterface.Models
     public int score { get; set; }
     public string ImageSource { get; set; }
 
-    // public ICollection<Comment> Comments { get; set; } for comments later on
+    public ICollection<Comment> Comments { get; set; }
     public static List<Post> GetPosts()
     {
       var apiCallTask = ApiHelper.GetAll("Posts");
