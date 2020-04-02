@@ -29,7 +29,8 @@ namespace CatBoardApi.Models
                 new Post { PostId = 1, Title = "OMG", Body = "Cats standing on their hind legs", AuthorId = 1, BoardId = 1, ImageSource = "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg"},
                 new Post { PostId = 2, Title = "No no no", Body = "Cats", AuthorId = 1, BoardId = 2, ImageSource = "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg"},
                 new Post { PostId = 3, Title = "What!", Body = "Fighting cats", AuthorId = 1, BoardId = 1, ImageSource = "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg"},
-                new Post { PostId = 4, Title = "That cat can sit.", Body = "Cats living like tomorrow doesn't matter.", AuthorId = 1, BoardId = 2, ImageSource = "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg"}
+                new Post { PostId = 4, Title = "That cat can sit.", Body = "Cats living like tomorrow doesn't matter.", AuthorId = 1, BoardId = 2, ImageSource = "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg"},
+                new Post { PostId = 5, Title = "mustards", Body = "this cat got into the mustard", AuthorId = 1, BoardId = 2, ImageSource = "https://i.redd.it/edle727b0sx11.jpg"}
             );
         builder.Entity<User>()
             .HasData(
