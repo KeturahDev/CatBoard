@@ -26,10 +26,10 @@ namespace CatBoardApi.Models
             );
         builder.Entity<Post>()
             .HasData(
-                new Post { PostId = 1, Title = "OMG", Body = "Cats standing on their hind legs", AuthorId = 1, BoardId = 1},
-                new Post { PostId = 2, Title = "No no no", Body = "Cats", AuthorId = 1, BoardId = 2},
-                new Post { PostId = 3, Title = "What!", Body = "Fighting cats", AuthorId = 1, BoardId = 1},
-                new Post { PostId = 4, Title = "That cat can sit.", Body = "Cats living like tomorrow doesn't matter.", AuthorId = 1, BoardId = 2}
+                new Post { PostId = 1, Title = "OMG", Body = "Cats standing on their hind legs", AuthorId = 1, BoardId = 1, ImageSource = "https://www.writeups.org/wp-content/uploads/Rick-Sanchez-Rick-and-Morty.jpg"},
+                new Post { PostId = 2, Title = "No no no", Body = "Cats", AuthorId = 1, BoardId = 2, ImageSource = "https://www.writeups.org/wp-content/uploads/Rick-Sanchez-Rick-and-Morty.jpg"},
+                new Post { PostId = 3, Title = "What!", Body = "Fighting cats", AuthorId = 1, BoardId = 1, ImageSource = "https://www.writeups.org/wp-content/uploads/Rick-Sanchez-Rick-and-Morty.jpg"},
+                new Post { PostId = 4, Title = "That cat can sit.", Body = "Cats living like tomorrow doesn't matter.", AuthorId = 1, BoardId = 2, ImageSource = "https://www.writeups.org/wp-content/uploads/Rick-Sanchez-Rick-and-Morty.jpg"}
             );
         builder.Entity<User>()
             .HasData(

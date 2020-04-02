@@ -19,6 +19,7 @@ namespace CatBoardApi.Models
     public DateTime DateCreated { get; set; }
     public DateTime EditDate { get; set; }
     public int Score { get; set; }
+    public string ImageSource { get; set; }
 
     public Post()
     {

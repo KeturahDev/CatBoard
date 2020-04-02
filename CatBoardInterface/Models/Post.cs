@@ -13,6 +13,7 @@ namespace CatBoardInterface.Models
     public string Title { get; set; }
     public string Body { get; set; }
     public int score { get; set; }
+    public string ImageSource { get; set; }
 
     // public ICollection<Comment> Comments { get; set; } for comments later on
     public static List<Post> GetPosts()
