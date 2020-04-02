@@ -69,5 +69,26 @@ namespace CatBoardApi.Controllers
       _db.Posts.Remove(thisPost);
       _db.SaveChanges();
     }
+
+    //upvote
+    [HttpPatch("{id}/upvote")]
+    public void UpVote(int id)
+    {
+      Post thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id); 
+      thisPost.Score ++;
+      _db.Entry(thisPost).State = EntityState.Modified;
+      _db.SaveChanges();
+    }
+
+
+    //downvote
+    [HttpPatch("{id}/downvote")]
+    public void DownVote(int id)
+    {
+      Post thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id); 
+      thisPost.Score --;
+      _db.Entry(thisPost).State = EntityState.Modified;
+      _db.SaveChanges();
+    }
   }
 }
