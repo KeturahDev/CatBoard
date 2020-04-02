@@ -20,6 +20,8 @@ namespace CatBoardInterface.Controllers
     public ActionResult Details(int id)
     {
       var thisBoard = Board.GetDetails(id);
+      var postsList = thisBoard.Posts.OrderByDescending(post => post.score);
+      ViewBag.OrderedPosts = postsList;
       return View(thisBoard);
     }
 

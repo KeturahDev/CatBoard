@@ -1,12 +1,14 @@
 <div class="banner--box">
-  <img src="@Model.BannerImage" alt="Banner" class="banner--img">
+  <div class="banner--img-box">
+    <img src="@Model.BannerImage" alt="Banner" class="banner--img">
+  </div>
 </div>
 <h1>@Model.Name</h1>
 
 <h2>Description: @Model.Description</h2>
 <hr>
 
-@foreach (var post in Model.Posts)
+@foreach (var post in ViewBag.OrderedPosts)
 {
   <div class="row">
       <div class="col-sm-1 text-center">

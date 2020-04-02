@@ -5,6 +5,7 @@
 {
 
   @Html.ActionLink($"{board.Name}", "Details", new {id = board.BoardId}, new { @class = "btn btn-dark btn-large"});
+  <img src=@board.BannerImage class="banner-img--index">
   <hr>
 }
 <a href="/boards/create">

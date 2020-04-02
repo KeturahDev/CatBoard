@@ -1,5 +1,7 @@
 <h1>Details</h1>
-<img src="@Model.ImageSource" alt="post picture">
+<div class="post-img">
+  <img src="@Model.ImageSource" alt="post picture">
+</div>
 <div> @Model.Title </div>
 <div> @Model.Body </div>
 <div> @Model.score </div>
@@ -20,5 +22,8 @@
     }
 </div>
 
+<hr>
+
 @Html.ActionLink("Edit", "Edit", "Posts", new {boardId = Model.BoardId, postId = Model.PostId }, new {@class="btn btn-info"})
 @Html.ActionLink("Delete", "Delete", "Posts", new {boardId = Model.BoardId, postId = Model.PostId }, new {@class="btn btn-danger"})
+@Html.ActionLink("Back", "Details", "Boards", new {id = Model.BoardId}, new {@class="btn btn-warning"})

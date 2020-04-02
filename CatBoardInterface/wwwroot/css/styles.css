@@ -1,0 +1,39 @@
+body{
+  background-color: rgb(214, 194, 246);
+}
+/* crops image into an actual banner */
+.banner--box {
+ width: 100%;
+ max-height: 20rem;
+ overflow: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* inline block holding image */
+.banner--img-box {
+  height: 500px;
+  width: 200%;
+  position: relative;
+}
+
+/* makes image fill inline block */
+.banner--img {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.post-img {
+  max-width: 100%;
+  /* text-align: center; */
+}
+
+.post-img img {
+  max-width: 60%;
+}
+
+.banner-img--index {
+  max-width: 100px;
+}
