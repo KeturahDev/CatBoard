@@ -3,13 +3,48 @@
 
 Repo holding ASP.NET core MVC application to display views that interact with the CatBoardApi application and the Api.
 
-## Specifications user stories:
+## Specifications 
 
-* As a user, I want to be able to GET all messages related to a specific group.
-* As a user, I want to be able to POST messages to a specific group.
+### user stories:
+
+* As a user, I want to be able to GET all boards.
+* As a user, I want to be able to GET all posts related to boards.
+* As a user, I want to be able to POST boards.
+* As a user, I want to be able to POST posts to boards.
 * As a user, I want to be able to see a list of all groups.
 * As a user, I want to input date parameters and retrieve only messages posted during that timeframe.
 * As a user, I want to be able to PUT and DELETE messages, but only if I wrote them. (Start by requiring a user_name param to match the user_name of the author on the message. You can always try authentication later.)
+
+### API Endpoints
+
+BOARDS
+```
+GET /api/boards
+POST /api/boards
+GET /api/boards/{boardId}
+PUT /api/boards/{boardId}
+DELETE /api/boards/{boardId}
+```
+
+POSTS
+```
+GET /api/boards/{boardId}/Posts
+POST /api/boards/{boardId}/Posts
+GET /api​/boards​/{boardId}​/Posts​/{id}
+PUT /api​/boards​/{boardId}​/Posts​/{id}
+DELETE /api/boards/{boardId}/Posts/{id}
+PATCH /api​/boards​/{boardId}​/Posts​/{id}​/upvote
+PATCH /api/boards/{boardId}/Posts/{id}/downvote
+```
+
+COMMENTS (*- Interface: work in progress -*)
+```
+GET /api/boards/{boardId}/posts/{postId}/Comments
+POST /api/boards/{boardId}/posts/{postId}/Comments
+GET /api/boards/{boardId}/posts/{postId}/Comments/{id}
+PUT /api/boards/{boardId}/posts/{postId}/Comments/{id}
+DELETE /api/boards/{boardId}/posts/{postId}/Comments/{id}
+```
 
 
 ## Getting Started

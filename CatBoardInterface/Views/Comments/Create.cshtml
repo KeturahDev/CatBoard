@@ -5,7 +5,7 @@
     <h1 class="text-center">Add Comment</h1>
     <p> view bag for board Id = @ViewBag.boardId </p>
     <p> view bag for post Id= @ViewBag.postId </p>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Create", "Comments"))
     {
       <input type="hidden" name="boardId" value="@ViewBag.boardId">
       <input type="hidden" name="postId" value="@ViewBag.postId">

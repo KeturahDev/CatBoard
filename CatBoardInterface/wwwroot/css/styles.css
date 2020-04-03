@@ -36,4 +36,52 @@ body{
 
 .banner-img--index {
   max-width: 100px;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.post-img {
+  max-width: 100%;
+  /* text-align: center; */
+}
+
+.post-img img {
+  max-width: 60%;
+}
+
+.banner-img--index {
+  max-width: 100px;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.post-img {
+  max-width: 100%;
+  /* text-align: center; */
+}
+
+.post-img img {
+  max-width: 60%;
+}
+
+.banner-img--index {
+  max-width: 100px;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+
+.post-img {
+  max-width: 100%;
+  /* text-align: center; */
+}
+
+.post-img img {
+  max-width: 60%;
+}
+
+.banner-img--index {
+  max-width: 100px;
 }
