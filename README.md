@@ -11,9 +11,12 @@ Repo holding ASP.NET core MVC application to display views that interact with th
 * As a user, I want to be able to GET all posts related to boards.
 * As a user, I want to be able to POST boards.
 * As a user, I want to be able to POST posts to boards.
-* As a user, I want to be able to see a list of all groups.
-* As a user, I want to input date parameters and retrieve only messages posted during that timeframe.
-* As a user, I want to be able to PUT and DELETE messages, but only if I wrote them. (Start by requiring a user_name param to match the user_name of the author on the message. You can always try authentication later.)
+* As a user, I want to be able to POST comments to posts.
+* As a user, I want to be able to PUT/Update specific boards.
+* As a user, I want to be able to PUT/Update specific posts.
+* As a user, I want to be able to DELETE specific boards.
+* As a user, I want to be able to DELETE specific posts.
+
 
 ### API Endpoints
 
@@ -58,25 +61,54 @@ Download the .zip file and extract all files into directory of your choice OR cl
 
 ### Installing
 
+In terminal, located in your desktop directory...
+
 1. Clone the repository:
     ```
-    git clone https://github.com/KeturahDev/CatBoardApi.Solution.git
+    git clone https://github.com/KeturahDev/CatBoard.git
+    ```
+2. Open repo in VSCode - Do so manually, or type into terminal:
+    ```
+    Code CatBoard
     ```
 
-2. Restore all dependencies:
+### Application Setup
+*Let's start up the Api*
+
+3. Navigate to Api folder:
+    ```
+    cd CatBoardApi
+    ```
+4. Restore all dependencies:
     ```
     dotnet restore
     ```
 
-### Open program
-
-3. Compile and Run code:
+5. Compile and Run code:
     ```
     dotnet build
     dotnet run
     ```
+*Now to do the same thing for the interface*
 
+6. Navigate to Interface directory:
+    ```
+    cd ..
+    cd CatBoardInterface
+    ```
+7. Restore all dependencies:
+    ```
+    dotnet restore
+    ```
 
+8. Compile and Run code:
+    ```
+    dotnet build
+    dotnet run
+    ```
+ ### Opening the Program
+ 
+ open the **localhost:5010** link that shows in the terminal, and enjoy!
 
 ## Technologies Used
 
@@ -85,6 +117,10 @@ Download the .zip file and extract all files into directory of your choice OR cl
 * RestSharp API
 * Newtonsoft.Json
 * Git
+* Entity Framework Core
+* Swashbuckle 5.2.1
+* Pomelo.EntityFrameworkCore.MySql 2.2.1
+* MySqlConnector 
 
 
 ## Known Bugs
@@ -94,8 +130,6 @@ Currently there's no known bugs.
 Currently there's no known bugs, however, if there are any issues running this website I would love feedback! Please email us at 
 * keturah.dev@gmail.com.
 * jamisoncozart@gmail.com
-* 
-
 
 ## License
 
