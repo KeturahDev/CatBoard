@@ -122,6 +122,9 @@ In terminal, located in your desktop directory...
 * Pomelo.EntityFrameworkCore.MySql 2.2.1
 * MySqlConnector 
 
+## External Assets
+* MySqlWorkBench
+* Postman
 
 ## Known Bugs
 Currently there's no known bugs.
